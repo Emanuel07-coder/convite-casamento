@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite de Casamento - Tallita e Gustavo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ECRÃ 1: ENVELOPE FECHADO -->
+    <div id="envelope-screen">
+        <div class="envelope-container">
+            <div class="envelope-flap" id="flap"></div>
+            <div class="envelope-body">
+                <div class="seal" onclick="abrirConvite()">
+                    <i class="fa-solid fa-ring"></i>
+                </div>
+            </div>
+            <div class="envelope-lines"></div>
+        </div>
+        <p class="click-instruction">Toque no anel para abrir</p>
+    </div>
+
+    <!-- ECRÃ 2: SITE DO CONVITE -->
+    <div id="main-content">
+        
+        <!-- Secção 1: Capa -->
+        <section class="hero-section">
+            <div class="hero-overlay">
+                <div class="hero-text">
+                    <p class="small-title">JUNTAMENTE COM SUAS FAMÍLIAS</p>
+                    <h1>Tallita</h1>
+                    <span class="ampersand">&</span>
+                    <h1>Gustavo</h1>
+                    <p class="subtitle">CONVIDAM PARA A CERIMÓNIA DE SEU CASAMENTO</p>
+                    
+                    <div class="hero-date">
+                        <div class="date-box">29</div>
+                        <div class="month-year">Novembro<br>2026</div>
+                        <div class="time-box">15:00</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leitor de Música Flutuante -->
+        <div class="music-player">
+            <audio id="bg-music" loop>
+                <!-- O arquivo musica.mp3 deve estar na mesma pasta no GitHub -->
+                <source src="musica.mp3" type="audio/mpeg">
+            </audio>
+            <div class="song-info">
+                <i class="fa-solid fa-music"></i>
+                <span>Eles se Amam - Vocal Livre</span>
+            </div>
+            <div class="controls">
+                <i class="fa-solid fa-backward-step"></i>
+                <button id="play-btn" onclick="toggleMusic()"><i class="fa-solid fa-play"></i></button>
+                <i class="fa-solid fa-forward-step"></i>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+        </div>
+
+        <!-- Secção 2: Linha do Tempo (Cronograma) -->
+        <section class="timeline-section">
+            <h2 class="section-title">Nosso<br>GRANDE DIA</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time">15:00 - 18:00</div>
+                    <div class="event-details">
+                        <h3>CERIMÓNIA</h3>
+                        <p>Igreja Adventista do Sétimo Dia - Colonial<br>Avenida Jaru, 1914<br>Ariquemes / RO</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção 3: RSVP -->
+        <section class="rsvp-section">
+            <p class="rsvp-text">CONFIRME SUA PRESENÇA<br>ATÉ 29 DE OUTUBRO DE 2026</p>
+            <button class="white-btn" onclick="confirmarPresenca()">SIM, ESTAREI LÁ!</button>
+            <p class="rsvp-subtext">Estamos ansiosos para celebrar com você!</p>
+            
+            <div class="quote-box">
+                <i class="fa-solid fa-quote-left"></i>
+                <p>"Escolhi você. E escolheria você, em qualquer vida, em qualquer mundo, sem pensar duas vezes."</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
